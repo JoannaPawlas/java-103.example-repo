@@ -8,12 +8,15 @@ public class BMI {
         float weight = scanner.nextFloat();
         System.out.println("Podaj ile masz wzrostu: ");
         int height = scanner.nextInt();
-        double height2 = height * 0.01;
 
-        float heightSquare = (float) Math.pow(height2, 2);
+        float heightInMeters = (float) heightInMeters(height);
+        System.out.println(heightInMeters);
+        float heightToSquare = heightToSquare(heightInMeters);
+        System.out.println(heightToSquare);
+        float BMI = BMIMethod(weight, heightToSquare);
 
-        float BMI = weight/heightSquare;
         System.out.println(BMI);
+
         if (BMI >= 18.5 && BMI <= 24.9) {
             System.out.println("BMI optymalne");
         }else{
@@ -23,6 +26,24 @@ public class BMI {
 
 
 
+
+
+
+
+
+    }
+    public static float BMIMethod (float weight, float heightSquare){
+        float BMI = weight / heightSquare;
+        return BMI;
+
+    }
+    public static double heightInMeters (int height){
+        double heightInMeters = height * 0.01;
+        return heightInMeters;
+    }
+    public static float heightToSquare (double heightInMeters){
+        double heightToSquare = Math.pow(heightInMeters, 2);
+        return (float) heightToSquare;
 
     }
 }
