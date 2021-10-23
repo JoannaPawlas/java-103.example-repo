@@ -10,9 +10,9 @@ public class BMI {
         int height = scanner.nextInt();
 
         float heightInMeters = (float) heightInMeters(height);
-        System.out.println(heightInMeters);
+
         float heightToSquare = heightToSquare(heightInMeters);
-        System.out.println(heightToSquare);
+
         float BMI = BMIMethod(weight, heightToSquare);
 
         System.out.println(BMI);
