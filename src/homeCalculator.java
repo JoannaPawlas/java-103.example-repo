@@ -11,7 +11,11 @@ public class homeCalculator {
         String operator = scanner.next();
         System.out.println("Podaj drugą liczbę: ");
         float number2 = scanner.nextInt();
-        while (operator.equals("+")){
+        while(operator.equals("!")) {
+            System.out.println("Nie ma takiego działania matematycznego");
+            break;
+
+        }while (operator.equals("+")){
            System.out.println("wynik dodawania wynosi: " + summing(number1, "+", number2));
            break;
         }while(operator.equals("-")) {
@@ -22,11 +26,9 @@ public class homeCalculator {
             break;
         }while(operator.equals("/")) {
             System.out.println("wynik dzielenia wynosi: " + diversion(number1, "/", number2));
+            break;
 
-
-
-
-        }
+       }
 
 
 
