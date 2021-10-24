@@ -18,10 +18,18 @@ public class Delta {
 
         double Delta = Delta (a, b, c);
         System.out.println(Delta);
-        double x1 = x1(a, b, Delta);
-        System.out.println(x1);
-        double x2 = x2(a, b, Delta);
-        System.out.println(x2);
+        while (Delta <= 0) {
+            System.out.println("Delta ujemna.");
+            break;
+        }if(Delta > 0){
+            double x1 = x1(a, b, Delta);
+            System.out.println(x1);
+            double x2 = x2(a, b, Delta);
+            System.out.println(x2);
+
+        }
+
+
         System.out.println("Wynik działania kwadratowego");
 
 
