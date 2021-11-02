@@ -2,13 +2,17 @@ import java.util.Scanner;
 
 public class home12 {
     public static void main(String[] args) {
-        String someText = new String("There something odd about you");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Napisz coś do mnie: ");
+        String someText = scanner.nextLine();
+
+
         int lenght = someText.length();
         System.out.println("Liczba wszystkich znaków to: "+lenght);
         int spaces = someText.indexOf(" ");
         System.out.println("Liczba samych spacji to: "+spaces);
 
-        System.out.println (howManySpaces(lenght, spaces));
+        System.out.println("Procentowy udział spacji to: " + howManySpaces(lenght, spaces));
 
 
 
@@ -18,8 +22,11 @@ public class home12 {
 
     }
 
-    public static double howManySpaces (int lenght, int spaces){
-        return (spaces/lenght)*100;
+    public static float howManySpaces (int lenght, int spaces){
+        float manySpaces = (float) spaces/(float)lenght * 100;
+        return manySpaces;
+
+
 
 
 
